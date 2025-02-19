@@ -14,11 +14,34 @@ const Contact = () => {
     email: string;
     message: string;
   }) => {
-    console.log("Form submitted:", formData);
-    toast({
-      title: "Message sent!",
-      description: "We'll get back to you as soon as possible.",
-    });
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+  
+      const result = await response.json();
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+      } else {
+        toast({
+          title: "Failed to send message.",
+          description: "We'll fix this soon.",
+        });
+      }
+    } catch (error) {
+      console.error("API request failed:", error);
+      toast({
+        title: "Failed to send message.",
+        description: "We'll fix this soon.",
+      });
+    }
   };
 
 
