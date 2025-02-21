@@ -13,15 +13,41 @@ const Contact = () => {
     email: string;
     message: string;
   }) => {
-    // ... rest of your handleSubmit code remains the same
+    try {
+      const response = await fetch("http://localhost:5000/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+      if (response.ok) {
+        toast({
+          title: "Message sent!",
+          description: "We'll get back to you as soon as possible.",
+        });
+      } else {
+        toast({
+          title: "Failed to send message.",
+          description: "We'll fix this soon.",
+        });
+      }
+    } catch (error) {
+      console.error("API request failed:", error);
+      toast({
+        title: "Failed to send message.",
+        description: "We'll fix this soon.",
+      });
+    }
   };
 
   return (
     <div className="min-h-screen">
       <Navigation />
       <div
-        // Added pt-24 for navigation bar spacing and adjusted min-height calculation
-        className="relative pt-24 min-h-[calc(100vh-64px)] flex items-center"
+        className="relative min-h-[calc(100vh-64px)] flex items-center"
         style={{
           backgroundImage: `url('/lovable-uploads/fa12b84c-20b5-47c5-ba33-d706cc471312.png')`,
           backgroundSize: "cover",
@@ -29,8 +55,7 @@ const Contact = () => {
         }}
       >
         <div className="absolute inset-0 bg-dark/5" />
-        {/* Removed py-16 from container since we have pt-24 above */}
-        <div className="container relative z-10 mx-auto px-4">
+        <div className="container relative z-10 mx-auto px-4 py-16">
           <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
@@ -44,7 +69,6 @@ const Contact = () => {
                 Reach out to us and let's create something amazing together.
               </p>
               <div className="space-y-8">
-                {/* Contact information sections remain the same */}
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -56,8 +80,8 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="text-xl font-semibold mb-2">Our Office</h3>
-                    <p className="text-gray-300">FIFTH FLOOR 63-66HATTON GARHATTON</p>
-                    <p className="text-gray-300">LONDON,UNITED KINGDOM</p>
+                    <p className="text-gray-300">FIFTH FLOOR 63-66 HATTON GAR, HATTON</p>
+                    <p className="text-gray-300">LONDON, UNITED KINGDOM</p>
                   </div>
                 </motion.div>
                 

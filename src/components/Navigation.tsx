@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> c3c9dfe63e606e7d7080330360288ca545db5e3f
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
@@ -35,6 +39,7 @@ const Navigation = () => {
                 Home
               </Link>
               
+<<<<<<< HEAD
               {/* Services Dropdown - Fixed version */}
               <div className="relative">
                 <div 
@@ -64,6 +69,37 @@ const Navigation = () => {
                   )}
                 </div>
               </div>
+=======
+{/* Services Dropdown - Fixed version */}
+<div className="relative">
+  <div 
+    className="relative"
+    onMouseEnter={() => setIsServicesOpen(true)}
+    onMouseLeave={() => setIsServicesOpen(false)}
+  >
+    <Link
+      to="/services"
+      className="px-4 py-2 rounded-full text-dark hover:bg-primary/10 hover:text-primary transition-all duration-300 flex items-center"
+    >
+      Services
+      <ChevronDown className="ml-1 h-4 w-4" />
+    </Link>
+    
+    {isServicesOpen && (
+      <div className="absolute top-full left-0 pt-2">
+        <div className="w-48 bg-white rounded-xl shadow-lg py-2">
+          <Link
+            to="/services"
+            className="block px-4 py-2 text-sm text-gray-700 hover:bg-primary/10 hover:text-primary"
+          >
+            Website Development
+          </Link>
+        </div>
+      </div>
+    )}
+  </div>
+</div>
+>>>>>>> c3c9dfe63e606e7d7080330360288ca545db5e3f
 
               {navItems.slice(2).map((item) => (
                 <Link
@@ -101,6 +137,16 @@ const Navigation = () => {
                   {item.name}
                 </Link>
               ))}
+<<<<<<< HEAD
+=======
+              <Link
+                to="/services"
+                className="px-4 py-3 rounded-xl text-dark hover:bg-primary/10 hover:text-primary transition-all duration-300"
+                onClick={() => setIsOpen(false)}
+              >
+                Services
+              </Link>
+>>>>>>> c3c9dfe63e606e7d7080330360288ca545db5e3f
             </div>
           </div>
         )}
@@ -109,4 +155,8 @@ const Navigation = () => {
   );
 };
 
+<<<<<<< HEAD
 export default Navigation;
+=======
+export default Navigation;
+>>>>>>> c3c9dfe63e606e7d7080330360288ca545db5e3f

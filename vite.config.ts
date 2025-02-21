@@ -19,8 +19,7 @@ export default defineConfig(({ mode }) => ({
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(), // Tag components only in dev mode
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -29,7 +28,7 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: mode === 'development', // Source maps only in development
     rollupOptions: {
       output: {
         manualChunks: {
@@ -37,5 +36,8 @@ export default defineConfig(({ mode }) => ({
         },
       },
     },
+  },
+  optimizeDeps: {
+    include: ['react', 'react-dom'],
   },
 }));
