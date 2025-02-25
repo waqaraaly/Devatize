@@ -61,7 +61,7 @@ const Hero = () => {
             </Link>
             
             <div className="mt-8 text-white text-lg">
-              $150/month – Pay Only If You Love It
+            £120/month – Pay Only If You Love It
             </div>
           </motion.div>
         </motion.div>
