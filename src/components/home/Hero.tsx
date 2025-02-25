@@ -9,7 +9,7 @@ const Hero = () => {
       <div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('/lovable-uploads/off.jpg')",
+          backgroundImage: "url('/lovable-uploads/off.webp')",
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

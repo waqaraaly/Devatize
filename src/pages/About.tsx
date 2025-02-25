@@ -24,7 +24,7 @@ const About = () => {
       step: "Step 2",
       title: "Design Preview & Revisions",
       description: "Next, we'll share a live design preview via screen share. You'll have the chance to review, provide feedback, and request changes until it's exactly what you envisioned.",
-      icon: "/lovable-uploads/3643ef4b-974d-4844-9e1a-1c9e1bcfdc7e.png"
+      icon: "/lovable-uploads/fg.webp"
     },
     {
       step: "Step 3",
@@ -43,7 +43,7 @@ const About = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{ 
-            backgroundImage: 'url("/lovable-uploads/df946fcc-87b6-4e71-be4a-9c749fbd7d15.png")',
+            backgroundImage: 'url("/lovable-uploads/xy.webp")',
           }}
         />
         <div className="absolute inset-0 bg-primary/50"></div>
@@ -77,13 +77,13 @@ const About = () => {
               <h2 className="text-3xl font-bold text-primary mb-6">Meet the Founder</h2>
               <div className="space-y-4 text-gray-600 leading-relaxed">
                 <p>
-                  I'm Waqar, the founder and lead developer behind Devatize. My journey into web development began with a simple goal—creating something meaningful while having the flexibility to be present for my family. Over the years, I honed my skills, learning to build websites the right way—custom-coded, no shortcuts, no cookie-cutter templates.
+                  I'm Waqar, the founder and lead developer behind Devatize. My journey into web development began with a simple goal creating something meaningful while having the flexibility to be present for my family. Over the years, I honed my skills, learning to build websites the right way custom coded, no shortcuts, no cookie-cutter templates.
                 </p>
                 <p>
-                  What I quickly realized was that many small businesses struggled to get a high-quality website without breaking the bank. Some were overcharged for outdated designs, while others simply couldn't afford the massive upfront costs. That's why I built a model that works for them—affordable, high-quality, and risk-free.
+                  What I quickly realized was that many small businesses struggled to get a high quality website without breaking the bank. Some were overcharged for outdated designs, while others simply couldn't afford the massive upfront costs. That's why I built a model that works for them affordable, high quality, and risk free.
                 </p>
                 <p>
-                  With $150/month and a "pay only if you love it" approach, I make sure every business gets a website that truly represents them—without the financial stress or compromises. No builders, no fluff—just pure, handcrafted code tailored to your success.
+                  With $150/month and a "pay only if you love it" approach, I make sure every business gets a website that truly represents them without the financial stress or compromises. No builders, no fluff just pure, handcrafted code tailored to your success.
                 </p>
               </div>
             </motion.div>
@@ -96,14 +96,14 @@ const About = () => {
             >
               <div className="absolute top-0 right-0 w-4/5 h-4/5 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/lovable-uploads/office.jpg"
+                  src="/lovable-uploads/office.webp"
                   alt="Office workspace"
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute bottom-0 left-0 w-3/4 h-3/4 rounded-2xl overflow-hidden shadow-2xl">
                 <img 
-                  src="/lovable-uploads/my.jpg"
+                  src="/lovable-uploads/my.webp"
                   alt="Development process"
                   className="w-full h-full object-cover"
                 />
@@ -195,6 +195,11 @@ const About = () => {
                   question: "Can a business cancel the contract before 6 months?",
                   answer: "Yes, businesses are free to cancel their contract at any time. However, full access to the website’s source code will only be granted upon completion of the 6-month contract."
                 },
+                {
+                  question: "What is the difference between the Lump Sum Plan and the Monthly Plan?",
+                  answer: "The main difference between the Lump Sum Plan and the Monthly Plan lies in the contract terms and support options. With the Lump Sum Plan, there is no contract required, and you receive full access to the source code. You have the flexibility to either opt for our support and maintenance services at an additional cost of £20 per month or manage support independently if you prefer. On the other hand, the Monthly Plan requires signing a 6-month contract, with support and maintenance services included as part of the plan. This allows you to choose between a one-time payment with optional support or a subscription model with ongoing services."
+                },
+                
                 {
                   question: "Will my website be mobile-friendly and SEO-optimized?",
                   answer: "Absolutely! We ensure that every website we develop is fully responsive, providing an optimal experience across all devices. Additionally, we implement basic SEO best practices to improve search engine visibility and ranking."

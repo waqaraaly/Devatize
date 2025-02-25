@@ -49,7 +49,7 @@ const Contact = () => {
       <div
         className="relative min-h-[calc(100vh-64px)] flex items-center"
         style={{
-          backgroundImage: `url('/lovable-uploads/fa12b84c-20b5-47c5-ba33-d706cc471312.png')`,
+          backgroundImage: `url('/lovable-uploads/cont.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}

@@ -1,3 +1,4 @@
+// vite.config.js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -5,21 +6,21 @@ import { componentTagger } from "lovable-tagger";
 
 export default defineConfig(({ mode }) => ({
   server: {
-    host: true, // Listen on all local IPs
-    port: 8080,
-    cors: true, // Enable CORS
+    host: true,
+    port: 8080, // Frontend runs on port 8080
+    cors: true,
     proxy: {
       '/api': {
-        target: 'http://localhost:5000', // Your Express server address
+        target: 'http://localhost:5000', // Change to 5000 to avoid recursion
         changeOrigin: true,
         secure: false,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, '/api'),
       },
     },
   },
   plugins: [
     react(),
-    mode === 'development' && componentTagger(), // Tag components only in dev mode
+    mode === 'development' && componentTagger(),
   ].filter(Boolean),
   resolve: {
     alias: {
@@ -28,7 +29,7 @@ export default defineConfig(({ mode }) => ({
   },
   build: {
     outDir: 'dist',
-    sourcemap: mode === 'development', // Source maps only in development
+    sourcemap: mode === 'development',
     rollupOptions: {
       output: {
         manualChunks: {
