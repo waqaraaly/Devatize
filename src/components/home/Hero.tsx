@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="relative h-[70vh] flex items-center">
+    <div className="relative h-[70vh] flex items-center justify-center">
       {/* Background image - immediate load with no transitions */}
       <div 
         className="absolute inset-0 z-0"
@@ -17,7 +17,7 @@ const Hero = () => {
         <div className="absolute inset-0 bg-primary/40 backdrop-blur-sm"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-4 relative z-10 mt-16 md:mt-0">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -28,7 +28,7 @@ const Hero = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-5xl md:text-6xl font-bold mb-6 text-white leading-tight"
+            className="text-4xl md:text-6xl font-bold mb-6 text-white leading-tight"
           >
             Pure Code.{" "}
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
