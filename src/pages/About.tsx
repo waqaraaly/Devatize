@@ -83,7 +83,7 @@ const About = () => {
                   What I quickly realized was that many small businesses struggled to get a high quality website without breaking the bank. Some were overcharged for outdated designs, while others simply couldn't afford the massive upfront costs. That's why I built a model that works for them affordable, high quality, and risk free.
                 </p>
                 <p>
-                  With $150/month and a "pay only if you love it" approach, I make sure every business gets a website that truly represents them without the financial stress or compromises. No builders, no fluff just pure, handcrafted code tailored to your success.
+                  With £120/month and a "pay only if you love it" approach, I make sure every business gets a website that truly represents them without the financial stress or compromises. No builders, no fluff just pure, handcrafted code tailored to your success.
                 </p>
               </div>
             </motion.div>
