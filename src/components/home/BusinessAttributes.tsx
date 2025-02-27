@@ -94,11 +94,14 @@ const BusinessAttributes = () => {
             className="flex justify-center"
           >
             <div className="max-w-4xl mx-auto">
-              <img 
-                src="/lovable-uploads/CVC.svg" 
-                alt="Company Vision Chart" 
-                className="w-full h-auto object-contain"
-              />
+            <img 
+            src="/lovable-uploads/CVC.svg" 
+            alt="Company Vision Chart" 
+            width="600" 
+            height="400" 
+            className="w-full h-auto object-contain"
+            />
+
             </div>
           </motion.div>
         </div>
