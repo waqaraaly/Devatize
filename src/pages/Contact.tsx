@@ -1,4 +1,3 @@
-
 import Navigation from "../components/Navigation";
 import ContactForm from "../components/contact/ContactForm";
 import Footer from "../components/Footer";
@@ -22,7 +21,7 @@ const Contact = () => {
         },
         body: JSON.stringify(formData),
       });
-  
+
       const result = await response.json();
       if (response.ok) {
         toast({
@@ -44,34 +43,32 @@ const Contact = () => {
     }
   };
 
-
-
   return (
     <div className="min-h-screen">
       <Navigation />
       <div
         className="relative min-h-[calc(100vh-64px)] flex items-center"
         style={{
-          backgroundImage: `url('/lovable-uploads/fa12b84c-20b5-47c5-ba33-d706cc471312.png')`,
+          backgroundImage: `url('/lovable-uploads/cont.webp')`,
           backgroundSize: "cover",
           backgroundPosition: "center",
         }}
       >
-      <div className="absolute inset-0 bg-dark/5" />
-        <div className="container relative z-10 mx-auto px-4 py-16">
-          <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+        <div className="absolute inset-0 bg-dark/5" />
+        <div className="container relative z-10 w-full px-3 md:px-6 py-16 pt-24 md:pt-28">
+          <div className="grid md:grid-cols-2 gap-8 items-center w-full">
             <motion.div 
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.6 }}
               className="text-white"
             >
-              <h1 className="text-4xl md:text-5xl font-bold mb-6">Get in Touch</h1>
-              <p className="text-lg mb-12 text-gray-200">
+              <h1 className="text-3xl md:text-5xl font-bold mb-4 md:mb-6">Get in Touch</h1>
+              <p className="text-base md:text-lg mb-8 md:mb-12 text-gray-200">
                 Ready to transform your digital presence? We're here to help bring your vision to life.
                 Reach out to us and let's create something amazing together.
               </p>
-              <div className="space-y-8">
+              <div className="space-y-6 md:space-y-8">
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
@@ -79,12 +76,12 @@ const Contact = () => {
                   className="flex items-start gap-4"
                 >
                   <div className="bg-white/10 p-3 rounded-xl">
-                    <MapPin className="w-6 h-6 text-white" />
+                    <MapPin className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Our Office</h3>
-                    <p className="text-gray-300">FIFTH FLOOR 63-66HATTON GARHATTON</p>
-                    <p className="text-gray-300">LONDON,UNITED KINGDOM</p>
+                    <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">Our Office</h3>
+                    <p className="text-sm md:text-base text-gray-300">FIFTH FLOOR 63-66 HATTON GAR, HATTON</p>
+                    <p className="text-sm md:text-base text-gray-300">LONDON, UNITED KINGDOM</p>
                   </div>
                 </motion.div>
                 
@@ -95,11 +92,11 @@ const Contact = () => {
                   className="flex items-start gap-4"
                 >
                   <div className="bg-white/10 p-3 rounded-xl">
-                    <Mail className="w-6 h-6 text-white" />
+                    <Mail className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Email Us</h3>
-                    <p className="text-gray-300">Devatize.com</p>
+                    <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">Email Us</h3>
+                    <p className="text-sm md:text-base text-gray-300">Devatize.com</p>
                   </div>
                 </motion.div>
                 
@@ -110,11 +107,11 @@ const Contact = () => {
                   className="flex items-start gap-4"
                 >
                   <div className="bg-white/10 p-3 rounded-xl">
-                    <Phone className="w-6 h-6 text-white" />
+                    <Phone className="w-5 h-5 md:w-6 md:h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2">Call Us</h3>
-                    <p className="text-gray-300">+44 7401 775098</p>
+                    <h3 className="text-lg md:text-xl font-semibold mb-1 md:mb-2">Call Us</h3>
+                    <p className="text-sm md:text-base text-gray-300">+44 7401 775098</p>
                   </div>
                 </motion.div>
               </div>

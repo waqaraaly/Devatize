@@ -74,7 +74,7 @@ const Services = () => {
       description: "Expert developers bring your website to life using cutting-edge technologies and best practices.",
       details: ["Clean code", "Modern frameworks", "Performance optimization", "Security measures"],
       icon: <Code className="w-8 h-8 text-primary" />,
-      image: "/lovable-uploads/A6.jpg"
+      image: "/lovable-uploads/A6.webp"
     },
     {
       step: 4,
@@ -82,7 +82,7 @@ const Services = () => {
       description: "Rigorous testing across devices and browsers ensures a flawless launch.",
       details: ["Quality assurance", "Cross-browser testing", "Performance testing", "Security audit"],
       icon: <Scan className="w-8 h-8 text-primary" />,
-      image: "/lovable-uploads/A7.jpg"
+      image: "/lovable-uploads/A7.webp"
     },
   ];
 
@@ -138,7 +138,7 @@ const Services = () => {
         <div 
           className="absolute inset-0 z-0"
           style={{
-            backgroundImage: "url('/lovable-uploads/A5.jpg')",
+            backgroundImage: "url('/lovable-uploads/A5.webp')",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}

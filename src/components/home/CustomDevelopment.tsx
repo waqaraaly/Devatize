@@ -71,7 +71,7 @@ const CustomDevelopment = () => {
           >
             <div className="relative w-full h-[500px] rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src="/lovable-uploads/54c19d0d-e926-437a-a61e-23dc577385d3.png"
+                src="/lovable-uploads/hp.webp"
                 alt="Custom Development"
                 className="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700"
               />
